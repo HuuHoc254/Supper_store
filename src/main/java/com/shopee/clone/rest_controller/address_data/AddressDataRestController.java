@@ -29,11 +29,11 @@ public class AddressDataRestController {
         return addressDataService.fetchAndSaveAddressData();
     }
     //Delete data
-    @GetMapping("delete")
-    private String deleteData(){
-         addressDataRepository.deleteAll();
-         return "deleted";
-    }
+//    @GetMapping("delete")
+//    private String deleteData(){
+//         addressDataRepository.deleteAll();
+//         return "deleted";
+//    }
     @GetMapping("/get_city/{id}")
     private ResponseEntity<?> getCity(@PathVariable Long id){
         return addressDataService.findCityById(id);

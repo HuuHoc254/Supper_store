@@ -15,7 +15,7 @@ public class WardEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-//    @JsonIgnore
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "district_id")
     private DistrictEntity district;
