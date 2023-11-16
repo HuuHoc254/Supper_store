@@ -5,6 +5,7 @@ import com.shopee.clone.DTO.address_data.GetDistrictByNameRequest;
 import com.shopee.clone.DTO.address_data.GetProvinceByNameRequest;
 import com.shopee.clone.DTO.address_data.GetWardByNameRequest;
 import com.shopee.clone.entity.address_data.AddressDataEntity;
+import com.shopee.clone.repository.address_list.AddressDataRepository;
 import com.shopee.clone.service.address_data.AddressDataService;
 import com.shopee.clone.service.address_data.impl.AddressDataServiceImpl;
 import com.shopee.clone.util.ResponseObject;
@@ -20,9 +21,18 @@ import org.springframework.web.bind.annotation.*;
 public class AddressDataRestController {
     @Autowired
     private AddressDataService addressDataService;
+
+    @Autowired
+    private AddressDataRepository addressDataRepository;
     @GetMapping("save")
     private ResponseEntity<?> saveData(){
         return addressDataService.fetchAndSaveAddressData();
+    }
+    //Delete data
+    @GetMapping("delete")
+    private String deleteData(){
+         addressDataRepository.deleteAll();
+         return "deleted";
     }
     @GetMapping("/get_city/{id}")
     private ResponseEntity<?> getCity(@PathVariable Long id){
