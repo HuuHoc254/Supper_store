@@ -20,7 +20,7 @@ public class AddressDataEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @JsonIgnore
+//    @JsonIgnore
     @JsonProperty("districts")
     @OneToMany(mappedBy = "addressData")
     private List<DistrictEntity> districtEntities;

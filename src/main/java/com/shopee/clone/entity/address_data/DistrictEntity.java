@@ -17,10 +17,10 @@ public class DistrictEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @JsonIgnore
+//    @JsonIgnore
     @OneToMany(mappedBy = "district",fetch = FetchType.EAGER)
     private List<WardEntity> wards;
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "address_data_id")
     private AddressDataEntity addressData;
