@@ -48,5 +48,5 @@ public interface OrderRepository extends JpaRepository<OrderEntity,Long> {
 
     Optional<OrderEntity> findBySeller_IdAndOrderNumber(Long sellerId, Integer orderNumber);
 
-    Optional<OrderEntity> findBySeller_IdAndOrder_Id(Long sellerId, Integer orderNumber);
+    Optional<OrderEntity> findBySeller_IdAndId(Long sellerId, Integer orderNumber);
 }
