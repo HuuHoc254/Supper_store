@@ -1032,7 +1032,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void changeStatusWhenDelivery(DeliveryStatusRequest deliveryStatusRequest) {
-            Optional<OrderEntity> orderEntity = orderRepository.findBySeller_IdAndOrderId(deliveryStatusRequest.getSellerId(),deliveryStatusRequest.getOrderNumber());
+            Optional<OrderEntity> orderEntity = orderRepository.findBySeller_IdAndOrderNumber(deliveryStatusRequest.getSellerId(),deliveryStatusRequest.getOrderNumber());
             if(orderEntity.isPresent()){
                 OrderEntity order = orderEntity.get();
                 if(deliveryStatusRequest.getStatus()){
