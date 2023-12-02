@@ -34,7 +34,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class CartServiceImpl implements CartService {
-    private static final String DELIVERY_API_URL = "https://delivery--production.up.railway.app/api/v1/delivery/cost";
+    private static final String DELIVERY_API_URL = "https://deliverysystembe-production.up.railway.app/api/v1/delivery/cost";
     @Autowired
     private RestTemplate restTemplate;
     @Autowired

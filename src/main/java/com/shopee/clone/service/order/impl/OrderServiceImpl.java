@@ -870,7 +870,7 @@ public class OrderServiceImpl implements OrderService {
 
             rawEcommerceOrderCreate.setRawEcommerceRequestList(rawEcommerceRequestList);
 
-            restTemplate.postForObject("https://delivery--production.up.railway.app/api/v1/delivery/receive-order", rawEcommerceOrderCreate, Object.class);
+            restTemplate.postForObject("https://deliverysystembe-production.up.railway.app/api/v1/delivery/receive-order", rawEcommerceOrderCreate, Object.class);
             return rawEcommerceOrderCreate;
         }
         return null;
